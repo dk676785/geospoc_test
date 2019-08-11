@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block body_block %}
+
+<style>
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+    h1{
+        text-align: center;
+        color: green;
+    }
+</style>
+
+
+<form method="GET" action="">
+<input type="text" name="q" placeholder="Search">
+</form><br>
+    <br>
+
+<table border="1" id="customers">
+
+<thead>
+<th>Name</th>
+<th>Email</th>
+<th>WebAddress</th>
+<th>Attachment</th>
+<th>Cover Letter</th>
+</thead>
+    {% for user in object_list %}
+<tr>
+    <td>{{ user.username }}</td>
+    <td>{{ user.emailaddress }}</td>
+    <td>{{ user.webaddress }}</td>
+    <td>Attachment</td>
+    <td>{{ user.cover_letter }}</td>
+</tr>
+    {% endfor %}
+</table>
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

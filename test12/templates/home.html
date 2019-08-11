@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% block body_block %}
+<style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+h1{
+    text-align: center;
+    color: #4CAF50;
+     }
+img{
+    width: 100%;
+    height: 400px;
+}
+
+
+
+</style>
+    <body>
+    <div class="container">
+        <h1><em>GeoSpoc Test Project!!</em></h1>
+
+
+
+<div class="w-content w-section" style="max-width:500px">
+  <img class="mySlides" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYVJ-aL5c_k0DH1S6rcFQ10e-C_FOadHDQ0GIGhfTNpGd8Lt51" style="width:220%">
+  <img class="mySlides" src="https://pbs.twimg.com/media/DSnUUhXUMAANAn3.jpg" style="width:220%">
+  <img class="mySlides" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMBEzSP-hMk_2qMmjkCz4EuLrOOTPfSa9JAW0XciqTYujQRLhQ" style="width:220%">
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+
+<p>
+    GeoSpoc incubated as an idea at a Barista coffee shop in Pune in the summer of 2014. Three friends got together to work on an idea to utilize geospatial tools to deliver value to the Indian ecosystem of businesses and not for profits.
+  </p>
+  
+2015
+<p>
+In June 2015, we converted to a private limited company, moved into a formal office and hired the first few employees. We managed to get a few contracts from the local university and a few businesses that understood the value of data and maps. One particularly interesting project was for a political party in Bengaluru, which assisted their election campaign tremendously.
+</p>
+
+2016
+<p>
+Our team grew to about 18 people. We landed our first big contract with a large finance company. It was a long term deal and changed the way we looked at working with big customers. We were a part of Aditya Birla’s BizLabs accelerator program, in which we made all the way to the final (1200 companies participated and only 3 made it to the final stage). Spending time with Kumar Mangalam Birla was one of the highlights of the year.
+</p>
+
+2017
+<p>
+Our growth trajectory continued in India as we ventured into newer technologies and markets. We opened our first offshore office in the USA towards the later half of the year as we focused our energies into making GeoSpoc a truly global company. The GeoSpoc family also grew from 18 to 30 people.
+</p>
+
+2018
+<p>
+Our growth doubled in terms of employees and customers. We diversified into more industries to provide services in the UK and USA. We expanded and opened an office in the UK. We invested in product development and launched our retail product for India called Geomarketeer. It is now being used by half a dozen companies and continues to grow. We also invested heavily in building our own platform called GeoQi.
+
+</p>
+        </div>
+</body>
+
+
+
+
+
+
+
+
+
+{% endblock %}

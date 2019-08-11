@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block body_block %}
+    <style>
+    input,textarea{
+        width: 100%;
+    }
+
+
+    </style>
+    <div class="container">
+    <div class="jumbotron">
+    <form method="post" enctype="multipart/form-data">
+
+
+        {{ form1.as_p }}
+        {{ form2.as_p }}
+        {% csrf_token %}
+    <input class="btn btn-warning" type="submit" value="REGISTER">
+
+
+    </form>
+{% endblock %}
+</div>
+</div>
